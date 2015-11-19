@@ -1,0 +1,25 @@
+{
+  "name": "nodejs_bootcamp",
+  "version": "1.0.0",
+  "description": "This is my training folder @ TECHNOCITE",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LucieDe/nodejs_bootcamp.git"
+  },
+  "keywords": [
+    "Training",
+    "NODE",
+    "GIT",
+    "TECHNOCITE"
+  ],
+  "author": "LucieDe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LucieDe/nodejs_bootcamp/issues"
+  },
+  "homepage": "https://github.com/LucieDe/nodejs_bootcamp#readme"
+}
