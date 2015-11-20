@@ -5,6 +5,8 @@ var elements=null;
 (args[2])? elements = args[2].split(','):elements=[];
 console.log(args[2]);
 
+// version 1
+
 fs.stat('list.txt', function(err, stat){
   if (err == null) {
     console.log('File exists');
@@ -31,3 +33,10 @@ function updateFile() {
     });
   });
 }
+
+//version 2
+
+//fs.appendFile('list.txt', utils.createNiceListOfFiles(elements), function(err){
+//  if (err) throw err;
+//  console.log('Great!')
+//});
