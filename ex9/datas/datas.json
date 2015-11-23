@@ -1,0 +1,29 @@
+{
+  "friends":[
+    {
+      "id":1,
+      "name":"Romain",
+      "adresse":"Rue de la Barre",
+      "cp":"7 ciel",
+      "friends":["gilles","vincent","stephane"]
+    },{
+      "id":2,
+      "name":"Romain2",
+      "adresse":"Rue de la Barre2",
+      "cp":"7 ciel",
+      "friends":["gilles","vincent","stephane"]
+    },{
+      "id":3,
+      "name":"Romain3",
+      "adresse":"Rue de la Barre3",
+      "cp":"7 ciel",
+      "friends":["gilles","vincent","stephane"]
+    },{
+      "id":4,
+      "name":"Romain4",
+      "adresse":"Rue de la Barre4",
+      "cp":"7 ciel",
+      "friends":["gilles","vincent","stephane"]
+    }
+  ]
+}
