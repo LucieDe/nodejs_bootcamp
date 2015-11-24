@@ -1,10 +1,10 @@
 'use strict';
-var fs = require('fs');
-var _ = require('lodash');
+let fs = require('fs');
+let _ = require('lodash');
 function friends(cb){
   //API Privée
   //init data
-  var friends = null;
+  let friends = null;
   fs.readFile('datas/datas.json',function(err,data){
     if (err) throw err;
     friends = JSON.parse(data.toString('utf8')).friends;
@@ -12,7 +12,7 @@ function friends(cb){
   });
 
   function persistData(){
-    var dataOut = JSON.stringify({"friends": friends});
+    let dataOut = JSON.stringify({"friends": friends});
     fs.writeFile('datas/datas.json',dataOut, function(err){
       if(err) throw err;
       console.log("data well saved");
@@ -33,7 +33,7 @@ function friends(cb){
       let currentId = maxId += 1;
       ob.id = currentId;
       friends.push(ob);
-      console.log(friends);
+      // console.log(friends);
     }else{
       let index = _.findIndex(friends,{"id":parseInt(ob.id)});
       if(index !== -1){
@@ -47,7 +47,7 @@ function friends(cb){
   };
 
   function deleteFriend(id){
-    var index = _.findIndex(friends,{"id":parseInt(id)});
+    let index = _.findIndex(friends,{"id":parseInt(id)});
     if(index !== -1){
       _.pullAt(friends,index)
     }else{
@@ -59,7 +59,7 @@ function friends(cb){
 
 
   //API Publique
-  var that = {};
+  let that = {};
   that.getFriends = getFriends;
   that.getAllFriends = getAllFriends;
   that.setFriend = setFriend;

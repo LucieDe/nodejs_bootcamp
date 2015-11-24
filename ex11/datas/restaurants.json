@@ -1,0 +1,52 @@
+db.restaurants.insert(
+    {
+      name:"Le Pivert",
+      address:{
+        street:"Rue de la Barre",
+        number:23,
+        city:"Mons",
+        zip:"7000"
+        },
+      phone:"0032459626532",
+      web:"http://www.pass.be",
+      type:['Française','Belge'],
+      rating:3
+    })
+
+
+
+    db.restaurants.insert(
+        {
+          name:"La Pulcinella",
+          address:{
+            street:"Rue de la Voile",
+            number:5,
+            city:"Bruxelles",
+            zip:"1060"
+            },
+          phone:"0032416795232",
+          web:"http://www.technocite.be",
+          type:['italienne'],
+          rating:5
+        })
+
+
+
+
+    {
+      "name":"La Pulcinella",
+      "address":"Rue de la Barre2",
+      "type":"Italienne",
+    },
+    {
+      "name":"Le Ming's Garden",
+      "address":"Rue de la Barre3",
+      "type":"Chinois",
+    },
+    {
+      "name":"Le Piano de Julien",
+      "address":"Rue de la Barre4",
+      "type":"Française",
+    }])
+
+db.restaurants.insert()

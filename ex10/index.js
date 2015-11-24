@@ -68,7 +68,7 @@ function initApp(){
   });
 
   app.post('/api/friends', function(req,res){
-    console.log(req.body);
+    // console.log(req.body);
     res.json({"result":myFriends.setFriend(req.body)});
   });
 
@@ -82,11 +82,13 @@ function initApp(){
     res.send('DELETE request to homepage');
   });
 
+//à positionner dans la fin du code au cas ou la requète ne réponds à aucun conditions
   app.use(function(req,res){
     res.status(404);
     res.send("The page "+req.url+" don\'t exist");
   });
 
+//permet éventuellement de travailler sur plusieurs serveurs
 http.createServer(app).listen(80, function(){
   console.log("Express started on localhost: 80 \n Press CTRL+c to terminate");
 });
