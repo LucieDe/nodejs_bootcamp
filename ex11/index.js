@@ -3,6 +3,7 @@ let fs = require('fs');
 let express = require('express');
 let http = require('http');
 let morgan = require('morgan');
+let bodyParser = require('body-parser');
 
 // let mongojs = require('mongojs');
 // let db = mongojs("restaurants", ["restaurants"]);
@@ -17,6 +18,9 @@ app.use(morgan('combined',{stream:accessLogStream}));
 
 //use static assets
 app.use(express.static(`${__dirname}/public`));
+
+//user body-parser for request
+app.use(bodyParser.json());
 
 //set app routes as middlewares
 app.use('/api/restaurants', restaurants);

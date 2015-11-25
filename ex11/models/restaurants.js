@@ -42,23 +42,51 @@ function Restaurants(){
 
   function getAll(next) {
     restaurant.find(null, function(err,data) {
-      if(err) throw err;
-      next(null,data);
+      next(err,data);
     }).sort([['name','ascending']]);
   };
 
   function getOne(id, next){
     restaurant.findById(id, function(err,data) {
-      if(err) throw err;
-      next(null, data);
+      next(err, data);
     });
   };
 
-  function getBySpecifiedField(field,searchValue, next){
-    restaurant.find({'name':name}, function(err,data) {
-      if(err) throw err;
-      next(null, data);
+  function getBySpecifiedField(field, searchValue, next){
+    var query = {[field]:new RegExp(searchValue,"i")};
+    restaurant.findOne(query, function(err,data) {
+      next(err, data);
     });
+  };
+
+
+  function setRestaurant(ob, next){
+    var resto = new restaurant(ob);
+    if(!ob._id){
+      resto.save(function(err, next){
+        next(err);
+      });
+    }else{
+      // restaurant.findOne({_id: ob._id}, function(err,doc){
+      //   for (var elem in ob){
+      //     doc[elem] = ob[elem];
+      //   };
+      //   doc.save(function(err){
+      //     next(err);
+      //   });
+      // });
+      restaurant.findByIdAndUpdate(ob._id, ob, function(err) {
+        next(err);
+      });
+    };
+  };
+
+  function deleteRestaurant(id,next){
+    if(ob){
+      restaurant.remove({_id:id},function(err){
+        next(err);
+      });
+    };
   };
 
 
@@ -66,6 +94,8 @@ function Restaurants(){
   that.getAll = getAll;
   that.getOne = getOne;
   that.getBySpecifiedField = getBySpecifiedField;
+  that.setRestaurant = setRestaurant;
+  that.deleteRestaurant = deleteRestaurant;
   return that;
 
 }
