@@ -1,0 +1,10 @@
+{
+  "author": "Lucie Desmae",
+  "menuItems": [
+    {"name":"mons", "link":"http://www.mons.be"},
+    {"name":"bruxelles", "link":"http://www.bruxelles.be"},
+    {"name":"tubize", "link":"http://www.tubize.be"},
+    {"name":"hornu", "link":"http://www.hornu.be"},
+    {"name":"technocite", "link":"http://www.technocite.be"}
+  ]
+}

@@ -1,0 +1,30 @@
+@import "compass/css3/border-radius";
+@import "compass";
+// body{
+//   @include background-image(radial-gradient(45px 45px, cyan 10px, dodgerblue 30px));
+// }
+#nav{
+  ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li{
+      display: inline-block;
+      a{
+        display: block;
+        padding: 6px 12px;
+        text-decoration: none;
+      }
+    }
+  }
+}
+.box-rounded{
+  padding: 10px;
+  border: 2px solid rgb(199, 34, 103);
+  width: 250px;
+  min-height: 50px;
+  @include border-radius(10px,10px);
+  // @include background-image(radial-gradient(45px 45px, cyan 10px, dodgerblue 30px));
+  $svg-gradient-shim-threshold: 1 !global;
+  @include background-image(linear-gradient(120deg, #2ac363, #cd8c14, #9c4cc2));
+}
