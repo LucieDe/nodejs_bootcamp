@@ -1,0 +1,10 @@
+{
+  "author":"VIncent Urban",
+  "menuItems":[
+    {"name":"item1","link":"http://www.google.com"},
+    {"name":"item2","link":"http://www.triptyk.eu"},
+    {"name":"item3","link":"http://www.technocite.be"},
+    {"name":"item4","link":"http://www.google.com"},
+    {"name":"item5","link":"http://www.google.com"}
+  ]
+}

@@ -1,0 +1,26 @@
+@import "compass";
+#nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li {
+      display: inline-block;
+      a {
+        display: block;
+        padding: 6px 12px;
+        text-decoration: none;
+      }
+    }
+  }
+}
+.box-rounded{
+  border-color: #00000;
+  border-style: solid;
+  width: 250px;
+  height: 50px;
+  @include border-radius(10px, 10px);
+  @include background(
+    linear-gradient(to bottom right, #333, #0c0),
+    radial-gradient(#c00, #fff 100px));
+}

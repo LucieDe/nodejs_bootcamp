@@ -1,0 +1,25 @@
+@import "globals";
+@import "nav";
+body{
+  background-color: $first-color;
+}
+.innerContainer{
+  width: 600px / 960px *100%; 
+}
+.message{
+  border: 1px solid #ccc;
+  padding:10px;
+  color:#333;
+}
+.success{
+  @extend .message;
+  border-color:green;
+}
+.error{
+  @extend .message;
+  border-color:red;
+}
+.warning{
+  @extend .message;
+  border-color: yellow;
+}
